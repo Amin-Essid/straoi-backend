@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/handbooks",
+      "handler": "handbook.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/handbooks/count",
+      "handler": "handbook.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/handbooks/:id",
+      "handler": "handbook.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/handbooks",
+      "handler": "handbook.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/handbooks/:id",
+      "handler": "handbook.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/handbooks/:id",
+      "handler": "handbook.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

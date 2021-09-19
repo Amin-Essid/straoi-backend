@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "guides",
+  "info": {
+    "name": "guide",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "author": {
+      "type": "string",
+      "required": true
+    },
+    "difficulty": {
+      "type": "integer",
+      "required": true
+    },
+    "time_required": {
+      "type": "string",
+      "required": true
+    },
+    "category": {
+      "via": "guides",
+      "model": "category"
+    },
+    "introduction": {
+      "type": "richtext",
+      "required": true
+    },
+    "steps": {
+      "via": "guide",
+      "collection": "step"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "url": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "handbook": {
+      "via": "guides",
+      "model": "handbook"
+    }
+  }
+}
